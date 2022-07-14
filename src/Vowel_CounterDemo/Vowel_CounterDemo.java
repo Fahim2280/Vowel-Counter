@@ -20,7 +20,14 @@ public class Vowel_CounterDemo extends JFrame {
     private JButton bu;
     private Font f;
     private Cursor cu;
-
+    
+    int totalVowel = 0;
+    int letter_a = 0;
+    int letter_e = 0;
+    int letter_i = 0;
+    int letter_o = 0;
+    int letter_u = 0;
+    
     void icon() {
 
         icon = new ImageIcon(getClass().getResource("VowelCountericon.jpg"));
