@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -65,6 +67,42 @@ public class Vowel_CounterDemo extends JFrame {
         ta2.setBounds(20, 430, 450, 200);
         ta2.setFont(f);
         c.add(ta2);
+        
+        ta.addKeyListener(new KeyListener(){
+            @Override
+            public void keyTyped(KeyEvent e) {        
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(e.getSource() == ta){
+                    if (KeyEvent.VK_A == e.getKeyCode()) {
+                        letter_a++;
+                        totalVowel++;        
+                    }
+                    if (KeyEvent.VK_E == e.getKeyCode()) {
+                        letter_e++;
+                        totalVowel++;  
+                    }
+                    if (KeyEvent.VK_I == e.getKeyCode()) {
+                        letter_i++;
+                        totalVowel++;  
+                    }
+                    if (KeyEvent.VK_O == e.getKeyCode()) {
+                        letter_o++;
+                        totalVowel++;  
+                    }if (KeyEvent.VK_U == e.getKeyCode()) {
+                        letter_u++;
+                        totalVowel++;  
+                    }       
+                }
+              
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {    
+            }
+        });
 
     }
 
